@@ -1,4 +1,5 @@
-import { CssBaseline, Grid } from "@material-ui/core";
+import CssBaseline from "@mui/material/CssBaseline";
+import Grid from '@mui/material/Grid';
 
 import Header from "./components/Header/Header";
 import Map from "./components/Map/Map";
