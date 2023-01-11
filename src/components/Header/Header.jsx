@@ -5,11 +5,11 @@ import {
   Search,
   SearchIconWrapper,
   StyledInputBase,
-  TitleContent,
+  TitleContent
 } from "./styles";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 
-function Header({ setCoordinates }) {
+function Header({ setCoordinates, jsApiLoaded }) {
   const [autoComplete, setAutoComplete] = useState(null);
   const onLoadHandler = (autoCompleteRef) => setAutoComplete(autoCompleteRef);
   const onPlaceChangedHandler = () => {
@@ -24,6 +24,7 @@ function Header({ setCoordinates }) {
         <TitleContent variant="h5">Travel Advisor</TitleContent>
         <Box display="flex" alignItems="center">
           <TitleContent variant="h6">Explore new places</TitleContent>
+          {jsApiLoaded && 
           <Autocomplete
             onLoad={onLoadHandler}
             onPlaceChanged={onPlaceChangedHandler}
@@ -35,6 +36,7 @@ function Header({ setCoordinates }) {
               <StyledInputBase placeholder="Search..." />
             </Search>
           </Autocomplete>
+          }
         </Box>
       </Toolbar>
     </AppBar>

@@ -9,11 +9,7 @@ const MapContainer = styled("div")(({theme}) => ({
 }));
 
 const StyledPaper = styled(Paper)(() => ({
-    padding: '10px', display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '120px'
+    padding: '10px', display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '120px', zIndex: 9, position: "relative" 
 }));
 
-const MarkerContainer = styled("div")(() => ({
-    position: 'absolute', transform: 'translate(-50%, -50%)', zIndex: 1, '&:hover': { zIndex: 2 }
-}));
-
-export { MapContainer, StyledPaper, MarkerContainer };
+export { MapContainer, StyledPaper };

@@ -16,6 +16,7 @@ function List({ places, childClicked, isLoading, type, setType, rating, setRatin
   useEffect(() => {
     const refs = places.map((_, i) => elRefs[i] || createRef());
     setElRefs(refs);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [places]);
 
   return (
